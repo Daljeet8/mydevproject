@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My DevOps Project</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuickTask - To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>...........Welcome to My DevOps Project .........</h1>
-    <p>This site is deployed automatically using GitHub Pages.</p>
-  </header>
-
-  <main>
-    <button onclick="showMessage()">Click Me</button>
-    <p id="output"></p>
-  </main>
-
-  <footer>
-    <p>&copy; Daljeet Kaur | College DevOps Project</p>
-  </footer>
-
+  <div class="app">
+    <h1>📝 QuickTask</h1>
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Enter a new task..." />
+      <button onclick="addTask()">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

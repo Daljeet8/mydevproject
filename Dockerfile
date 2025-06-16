@@ -1,8 +1,11 @@
-# Use NGINX as the base image
+# Use an nginx base image to serve static content
 FROM nginx:alpine
 
-# Copy all website files to NGINX's public folder
+# Remove default nginx content
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy static files to nginx
 COPY . /usr/share/nginx/html
 
-# Expose port 80 (default web port)
 EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
